@@ -8,7 +8,4 @@ spec:
   - image: nginx
     imagePullPolicy: Always
     name: nginx-pod
-    resources:
-      limit:
-        cpu: 100m
-        memory: 200Mi
+    resources: {}
