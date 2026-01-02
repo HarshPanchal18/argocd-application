@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
   - image: nginx
-    imagePullPolicy: Always
+    imagePullPolicy: IfNotPresent
     name: nginx-pod
     resources: {}
