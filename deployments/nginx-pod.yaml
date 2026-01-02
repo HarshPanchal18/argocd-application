@@ -6,6 +6,9 @@ metadata:
 spec:
   containers:
   - image: nginx
-    imagePullPolicy: IfNotPresent
+    imagePullPolicy: Always
     name: nginx-pod
-    resources: {}
+    resources:
+      limit:
+        cpu: 100m
+        memory: 200Mi
