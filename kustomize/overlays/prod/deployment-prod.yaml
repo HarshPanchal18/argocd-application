@@ -14,11 +14,11 @@ spec:
         image: nginx:1.14.2
         resources:
           limits:
-            cpu: "100m"
-            memory: "256Mi"
-          requests:
             cpu: "500m"
             memory: "512Mi"
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
   strategy:
     type: RollingUpdate
     rollingUpdate:
