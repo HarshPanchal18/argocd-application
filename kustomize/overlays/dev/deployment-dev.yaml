@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-deployment
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   replicas: 2 # Update the replica count to 2
   selector:
@@ -11,6 +13,8 @@ spec:
     spec:
       containers:
       - name: nginx
+        image: nginx
+        imagePullPolicy: Always
         resources:
           limits:
             cpu: "200m" # Lower CPU limit to 200m (0.2 CPU cores)
