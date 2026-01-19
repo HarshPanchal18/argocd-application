@@ -13,7 +13,7 @@ spec:
         app: nginx-web
     spec:
       containers:
-        - image: harshpanchal18/nginx-argo:v1.0
+        - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           name: nginx
           ports:
             - containerPort: 80
