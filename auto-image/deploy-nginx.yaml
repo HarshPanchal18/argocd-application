@@ -13,7 +13,7 @@ spec:
         app: nginx-web
     spec:
       containers:
-        - image: harshpanchal18/nginx-argo
+        - image: harshpanchal18/nginx-argo:v1.0
           name: nginx
           ports:
             - containerPort: 80
