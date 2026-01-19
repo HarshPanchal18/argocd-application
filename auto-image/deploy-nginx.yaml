@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-nginx-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-web
+  template:
+    metadata:
+      labels:
+        app: nginx-web
+    spec:
+      containers:
+        - image: harshpanchal18/nginx-argo
+          name: nginx
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 1
+              memory: 256Mi
+            requests:
+              cpu: 1
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-nginx-web
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: nginx-web
+  type: NodePort
