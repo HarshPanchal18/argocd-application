@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - harshpanchal18/nginx-argo:v1.1.5
