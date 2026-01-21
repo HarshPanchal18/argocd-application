@@ -6,4 +6,4 @@ resources:
   - cluster-role.yaml
 images:
   - name: harshpanchal18/nginx-argo
-    newTag: v1.1.6
+    newTag: v1.1.7
