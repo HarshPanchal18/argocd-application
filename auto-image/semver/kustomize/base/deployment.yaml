@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-deployment
+  name: web-deployment-semver
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: web-semver
   template:
     metadata:
       labels:
-        app: web
+        app: web-semver
     spec:
       containers:
       - name: nginx

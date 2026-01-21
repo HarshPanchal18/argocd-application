@@ -4,7 +4,7 @@ metadata:
   name: web-service
 spec:
   selector:
-    app: web
+    app: web-semver
   ports:
   - name: http
     port: 80

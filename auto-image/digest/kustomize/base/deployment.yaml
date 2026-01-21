@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-deployment-latest
+  name: web-deployment-digest
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: web-digest
   template:
     metadata:
       labels:
-        app: web
+        app: web-digest
     spec:
       containers:
       - name: nginx

@@ -4,7 +4,7 @@ metadata:
   name: web-service-latest
 spec:
   selector:
-    app: web
+    app: web-digest
   ports:
   - name: http
     port: 80
