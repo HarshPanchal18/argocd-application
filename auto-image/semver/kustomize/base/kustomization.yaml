@@ -1,7 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 resources:
   - deployment.yaml
   - service.yaml
   - cluster-role.yaml
+images:
+  - name: harshpanchal18/nginx-argo
+    newTag: v1.1.6
