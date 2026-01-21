@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-deployment
+  name: web-deployment-latest
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
