@@ -10,6 +10,8 @@ spec:
       app: redis
   template:
     metadata:
+      annotations:
+        restartAt: "2026-02-03T17:08:00Z"
       labels:
         app: redis
     spec:
